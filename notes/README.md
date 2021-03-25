@@ -1,1 +1,1 @@
-[embed]https://github.com/hsingh124/telescope-scheduling/blob/main/notes/main.pdf[/embed]
+Link to PDF: [github.com/hsingh124/telescope-scheduling/blob/main/notes/main.pdf](https://github.com/hsingh124/telescope-scheduling/blob/main/notes/main.pdf)
