@@ -1,22 +1,48 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{marginnote}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=10mm,
+    top=20mm,
+}
 
-\title{Bibtex sample}
-\author{Harpreet }
-\date{March 2021}
+\title{Research notes on Telescope Scheduling}
+\author{Harpreet Singh}
+\date{2021}
 
 \begin{document}
 
+\begin{titlepage}
 \maketitle
+\end{titlepage}
 
-\section{Introduction}
+\marginnote{This is a \textit{The \LaTeX\ Companion} \cite{latexcompanion} margin note using the geometry package, set at 
+3cm vertical offset to the line it is typeseted.}[1cm]
+\noindent
+In this document some extra packages and parameters
+were added. There is an encoding package
+and pagesize and fontsize parameters.
 
+\medskip
+
+%Bibliographic references
 \begin{thebibliography}{9}
-\bibitem{texbook}
-A.I. Gomez de Castro, J.Yanez (2002) \emph{Optimization of telescope scheduling}, Algorithmic research and scientific policy.
+\bibitem{latexcompanion} 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+\textit{The \LaTeX\ Companion}. 
+Addison-Wesley, Reading, Massachusetts, 1993.
 
-\bibitem{lamport94}
-Mark Drummond, John Bresina, Keith Swanson \emph{Just in case scheduling}, A.I Research Branch, NASA Ames Research Center.
+\bibitem{einstein} 
+Albert Einstein. 
+\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) [\textit{On the electrodynamics of moving bodies}]. 
+Annalen der Physik, 322(10):891–921, 1905.
+
+\bibitem{knuthwebsite} 
+Knuth: Computers and Typesetting,
+\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
 \end{thebibliography}
 
 \end{document}
