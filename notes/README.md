@@ -1,0 +1,1 @@
+[embed]https://github.com/hsingh124/telescope-scheduling/blob/main/notes/main.pdf[/embed]
