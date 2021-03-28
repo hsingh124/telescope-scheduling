@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{marginnote}
+\usepackage{biblatex}
+\addbibresource{References.bib}
 \usepackage{geometry}
 \geometry{
     a4paper,
@@ -8,6 +10,8 @@
     left=10mm,
     top=20mm,
 }
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.5em}
 
 \title{Research notes on Telescope Scheduling}
 \author{Harpreet Singh}
@@ -19,30 +23,63 @@
 \maketitle
 \end{titlepage}
 
-\marginnote{This is a \textit{The \LaTeX\ Companion} \cite{latexcompanion} margin note using the geometry package, set at 
+\section*{\citetitle*{naghib2019framework}}
+
+\subsection*{LSST}
+\marginnote{This is a margin note using the geometry package, set at 
 3cm vertical offset to the line it is typeseted.}[1cm]
-\noindent
-In this document some extra packages and parameters
-were added. There is an encoding package
-and pagesize and fontsize parameters.
 
-\medskip
+The Large Synoptic Survey Telescope (LSST) is a large,
+ground-based optical survey that will image half of the sky
+every few nights from Cerro Pachon in Northern Chile. LSST
+comprises an 8.4 m primary mirror and a 3.2 gigapixel camera.
+With a 9.6 \(deg^2\) field of view, it will visit each part of its
+18,000 \(deg^2\) primary survey area about 1000 times over the
+course of 10 yr. Each visit will likely comprise a 15 s pair of
+exposures with a single-visit depth of about 24.5 mag (AB)
+(in the six bands u, g, r, i, z, and y). The revolutionary role of
+this telescope calls for no less than optimal operation.
 
-%Bibliographic references
-\begin{thebibliography}{9}
-\bibitem{latexcompanion} 
-Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
-\textit{The \LaTeX\ Companion}. 
-Addison-Wesley, Reading, Massachusetts, 1993.
+There are four primary science drivers for the LSST project:
+the characterization of dark energy through the multiple
+cosmological probes (e.g., gravitational weak lensing, luminosity distances from Type Ia supernovae, and baryon acoustic
+oscillations), mapping the 3D distribution of stars within our
+Galaxy, a census of solar system objects within the solar
+system, and a detailed study of the transient and variable
+universe. Each of these objectives has a different set of
+constraints and requirements on how the observations are made
+(e.g., the cadence of the observations, the number of filters as a
+function of time, the acceptable air-mass range for an
+observation). 
 
-\bibitem{einstein} 
-Albert Einstein. 
-\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) [\textit{On the electrodynamics of moving bodies}]. 
-Annalen der Physik, 322(10):891–921, 1905.
+\subsection*{Problem Defination and Constraints}
 
-\bibitem{knuthwebsite} 
-Knuth: Computers and Typesetting,
-\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
-\end{thebibliography}
+
+Earlier algorithmic approaches to the scheduling of groundbased telescopes 
+are heavily based on observation proposals.
+Proposals are handcrafted sequences of scripted astronomical
+observations. They are generally tested only for feasibility
+(e.g., that a set of fields were visible, or lie within a specified
+air-mass range, or within a window in time), but not necessarily
+for optimality.
+
+More recently, the development of more expensive groundbased instruments with complex missions made it impossible to
+rely solely on handcrafted proposals. The need for more
+efficient use of the instrument’s time led to the development of decision-making algorithms to optimize their science output.
+The scheduling at the single-visit level is referred to as optimal scheduling and it is
+stated that the optimal scheduling requires reevaluating the
+future sequence of observations once it is interrupted, but the
+necessary extra computation is neither affordable nor fast
+enough. However, in this paper we show that the scheduling in
+the single-visit level, optimal scheduling, can be quickly
+recovered after an interruption, if a memoryless framework is
+used. Thus, the optimality does not necessarily need to be
+sacrificed because of the limited computational resources.
+
+To run a ground-based telescope with multiple science
+objectives, such as LSST, the scheduler has to offer
+\textit{controllability}, \textit{adjustability}, and \textit{recoverability}
+
+\printbibliography
 
 \end{document}
