@@ -7,7 +7,6 @@
 \geometry{
     a4paper,
     total={170mm,257mm},
-    left=10mm,
     top=20mm,
 }
 \setlength\parindent{0pt}
@@ -19,15 +18,19 @@
 
 \begin{document}
 
-\begin{titlepage}
 \maketitle
-\end{titlepage}
+
+\newgeometry{
+    left=10mm,
+    top=20mm,
+}
 
 \section*{\citetitle*{naghib2019framework}}
 
-\subsection*{LSST}
 \marginnote{This is a margin note using the geometry package, set at 
 3cm vertical offset to the line it is typeseted.}[1cm]
+
+\subsection*{LSST}
 
 The Large Synoptic Survey Telescope (LSST) is a large,
 ground-based optical survey that will image half of the sky
@@ -79,6 +82,97 @@ sacrificed because of the limited computational resources.
 To run a ground-based telescope with multiple science
 objectives, such as LSST, the scheduler has to offer
 \textit{controllability}, \textit{adjustability}, and \textit{recoverability}
+
+
+\textit{MORE TO ADD!!!!!!!!!!!!}
+
+\section*{\citetitle*{bellm2019zwicky}}
+
+\subsection*{Introduction and ZTF}
+
+In this work we consider the specific scheduling problem of
+a single-telescope ground-based wide-field imaging survey. We
+are focused on its application to the Zwicky Transient Facility
+project, which imposes some specific requirements, but our
+formalism is relevant for other time-domain surveys, such as
+those conducted with the LSST, the Dark Energy Camera, 
+and Hyper Suprime-cam. Minor modifications would enable its
+use by multi-telescope surveys such as the Asteroid Terrestrialimpact
+Last Alert System, PanSTARRS, the All-sky Automated Survey for
+Supernovae, and BlackGEM.
+
+Simply stated, the scheduling problem to be solved is to
+determine which fields to observe in what order, with a goal of
+maximizing an objective function while achieving the desired
+temporal spacing of observations (“cadence”). Optimizing the
+survey schedule provides a greater quantity of high-quality
+data, increasing the scientific output of the survey.
+
+Specific requirements imposed on the ZTF scheduler
+included the following:
+
+\begin{enumerate}
+    \item Select pointings from a fixed field grid
+    \item  Operate in both simulation mode and on-sky using the same scheduling code.
+    \item Conduct several surveys, maintaining strict independence of their observations and balancing observing time between programs.
+    \item Provide interfaces for conducting TOO observations and monitoring scheduler status.
+    \item Recover appropriately from interruptions and weather losses.
+    \item Maximize an observing efficiency metric and prioritize cadence control.
+\end{enumerate}
+
+\subsection*{Problem}
+
+The ZTF scheduler attempts to maximize the total
+number of exposures taken per night, weighted by the spatial
+volume probed by each, and subject to the constraints imposed by
+program balance and cadence. If the observing
+cadences are well chosen, maximizing this quantity will maximize
+the transient discovery rate. Bellm explores the relationship
+between the chosen observing cadences, a survey’s volumetric
+and areal survey rates, and the transient detection rate.
+
+Neglecting cosmological effects, the volume \(V_{lim}\) probed by
+a given exposure is proportional to the cube of the limiting
+distance \(d_{lim}\) a transient of fiducial absolute magnitude M can
+be detected given the limiting magnitude \(m_{lim}: V_{lim} \propto d_{lim}^3\),
+where \(d = 10^{0.2(m_{lim}-M+5)}\)pc. The volumetric
+weighting per exposure is thus \[V = 10^{0.6(m_{lim} - 21)},\]
+where we have absorbed constant factors and normalized to a
+convenient limiting magnitude for ZTF.
+
+\subsection*{Constraints}
+This weighting combines in a self-consistent way many
+factors that are intuitively relevant for assessing whether an
+image is “good”: the limiting magnitude depends on the filter,
+seeing, airmass, and sky brightness. We use a model
+to predict the variation in limiting magnitude and
+hence our metric as a function of these time-varying inputs.
+Accordingly, our optimization will naturally select exposures
+near zenith and away from the moon; but by combining them in
+a single scalar the optimization can coherently trade these
+factors against one another as they change through the night.
+
+Our metric deliberately does not contain factors that account
+for relative scientific priority or cadence. These concerns have
+no general quantitative relationship to our objective function or
+each other.14 Instead, we use the structure of the optimization
+algorithm (Section 4) to impose these constraints.
+
+Our optimization algorithm (Section 4) maximizes the
+summed metric over an entire night. In cases where a greedy
+algorithm is more convenient, it is simple to define an
+instantaneous volumetric survey speed, \[V \propto 10^{0.6m_{lim}}/(t_{exp}+t_{OH})\]
+that normalizes the volume probed in an exposure by the time
+required to obtain it, a sum of the exposure time \(t_{exp}\) and any
+readout or slew overheads \(t_{OH}\).
+
+
+\subsection*{Future Improvements}
+
+\section*{Extra notes and observations}
+\begin{enumerate}
+    \item In a lot of papers, it was observed that the observation requests were weighted by a priority assigned to them by a committee or group.
+\end{enumerate}
 
 \printbibliography
 
