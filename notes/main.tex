@@ -4,6 +4,14 @@
 \usepackage{biblatex}
 \addbibresource{References.bib}
 \usepackage{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue
+}
 \geometry{
     a4paper,
     total={170mm,257mm},
@@ -21,14 +29,187 @@
 \maketitle
 
 \newgeometry{
-    left=10mm,
+    left=11mm,
     top=20mm,
 }
 
-\section*{\citetitle*{naghib2019framework}}
+\section*{\cite{bellm2019zwicky} \citetitle*{bellm2019zwicky}}
 
-\marginnote{This is a margin note using the geometry package, set at 
-3cm vertical offset to the line it is typeseted.}[1cm]
+\subsection*{Introduction and ZTF}
+
+ZTF: \url{https://www.ztf.caltech.edu/}
+
+In this work we consider the specific scheduling problem of
+a single-telescope ground-based wide-field imaging survey. We
+are focused on its application to the Zwicky Transient Facility
+project, which imposes some specific requirements, but our
+formalism is relevant for other time-domain surveys, such as
+those conducted with the LSST, the Dark Energy Camera, 
+and Hyper Suprime-cam. Minor modifications would enable its
+use by multi-telescope surveys such as the Asteroid Terrestrialimpact
+Last Alert System, PanSTARRS, the All-sky Automated Survey for
+Supernovae, and BlackGEM.
+
+Simply stated, the scheduling problem to be solved is to
+determine which fields to observe in what order, with a goal of
+maximizing an objective function while achieving the desired
+temporal spacing of observations (“cadence”). Optimizing the
+survey schedule provides a greater quantity of high-quality
+data, increasing the scientific output of the survey.
+
+\textbf{Python Implementation: \url{https://github.com/ZwickyTransientFacility/ztf_sim}}
+
+\subsection*{Constraints}
+This weighting combines in a self-consistent way many
+factors that are intuitively relevant for assessing whether an
+image is “good”: the limiting magnitude depends on the filter,
+seeing, airmass, and sky brightness. We use a model
+to predict the variation in limiting magnitude and
+hence our metric as a function of these time-varying inputs.
+Accordingly, our optimization will naturally select exposures
+near zenith and away from the moon; but by combining them in
+a single scalar the optimization can coherently trade these
+factors against one another as they change through the night.
+
+Our metric deliberately does not contain factors that account
+for relative scientific priority or cadence. These concerns have
+no general quantitative relationship to our objective function or
+each other. Instead, we use the structure of the optimization
+algorithm to impose these constraints.
+
+Our optimization algorithm maximizes the
+summed metric over an entire night. In cases where a greedy
+algorithm is more convenient, it is simple to define an
+instantaneous volumetric survey speed, \[V \propto 10^{0.6m_{lim}}/(t_{exp}+t_{OH})\]
+that normalizes the volume probed in an exposure by the time
+required to obtain it, a sum of the exposure time \(t_{exp}\) and any
+readout or slew overheads \(t_{OH}\).
+
+\subsection*{Problem}
+
+The ZTF scheduler attempts to maximize the total
+number of exposures taken per night, weighted by the spatial
+volume probed by each, and subject to the constraints imposed by
+program balance and cadence. If the observing
+cadences are well chosen, maximizing this quantity will maximize
+the transient discovery rate. Bellm explores the relationship
+between the chosen observing cadences, a survey’s volumetric
+and areal survey rates, and the transient detection rate.
+
+Neglecting cosmological effects, the volume \(V_{lim}\) probed by
+a given exposure is proportional to the cube of the limiting
+distance \(d_{lim}\) a transient of fiducial absolute magnitude M can
+be detected given the limiting magnitude \(m_{lim}: V_{lim} \propto d_{lim}^3\),
+where \(d = 10^{0.2(m_{lim}-M+5)}\)pc. The volumetric
+weighting per exposure is thus \[V = 10^{0.6(m_{lim} - 21)},\]
+where we have absorbed constant factors and normalized to a
+convenient limiting magnitude for ZTF.
+
+We construct the observing schedule by dividing the night
+into a set of temporal blocks T. The set of available filters in the camera is F. The set of
+Request Sets from all observing programs P is R.
+
+\(Y_{rtf}\) = 1 if Request Set \(r \in R\) has an observation scheduled
+at time block \(t \in T\) using filter \(f \in F\), and 0 otherwise
+
+\(Y_s\) = 1 if the filter changes between time blocks \(s \in T\)
+and \(s + 1 \in T\), and 0 otherwise.
+
+The optimizer maximizes an objective function which sums
+the volume-weighted (formula specified in the equation above) number of exposures
+scheduled through the night. Because of how we constrain the
+number of exposures in a temporal block, we also
+penalize for exposures lost due to filter changes. The objective
+function is thus
+\[max\left(\left(\sum_{r \in R}\sum_{t \in T}\sum_{f \in F}V_{rtf}Y_{rtf}) - (\frac{t_{filt}}{t_{exp}+t_{OH}}w\sum_{t \in T}Y_s\right)\right)\]
+
+where \(t_{filt}\) is the time required to change filters and w is a weight
+factor \((\approx(V_{rtf}))\) accounting for the value of each lost
+exposure.
+
+\subsection*{Future Improvements}
+
+\subsection*{Summary}
+
+\section*{\cite{moser2018dispatch} \citetitle*{moser2018dispatch}}
+
+\marginnote{This paper has a lot of really useful information from 
+other papers. Some points from this paper are listed in the 
+\textit{Extra notes and observations} section below. 
+\textbf{Definately give this another read}}[1cm]
+
+\subsection*{Introduction and related work}
+
+We consider strategies
+for minimising the time required to observe a fixed set of pulsars, which provides
+an excellent example of scheduling in an unpredictable environment. First, owing to
+scintillation, the intensity of a pulsar signal is variable and random; therefore, the
+decision to abort or prolong an observation can be made only after some fraction of
+the scheduled observation has been completed. Second, observations may be interrupted by 
+radio frequency interference or when the source sets below the horizon.
+Some sources are visible for more or less time depending on their declination and the
+latitude of the observing telescope. Formulating the problem in these terms leads to
+a highly dynamic shortest path problem with uncertainty. Unlike other documented
+telescope scheduling approaches, we demonstrate how a simple earliest setting policy
+achieves sets of pulsar observations in a rather short timespan.
+
+Telescope arrays have motivated the development of a new generation of scheduling algorithms. 
+ALMA, an array of 66 telescopes, has been operating since 2012,
+while the construction of the Square Kilometre Array (SKA) is planned to begin in
+2020. The SKA has motivated the Master’s thesis by Buchner \cite{buchner2011dynamic}, who proposed a
+number of scheduling policies, such as choosing the task with the highest priority, the
+task with the smallest observation time, the task that continues from the preceding
+time slot, and compared them with the performance of a Genetic Algorithm (GA). A
+Mixed-Integer Linear Program was also applied but abandoned for excessive running
+time. Buchner’s objective function maximises the observation time weighted by the
+task priorities.
+
+Our study is also motivated by the SKA and the optimal scheduling of large scale
+pulsar surveys and pulsar monitoring programs that will be undertaken with the next
+generation of radio telescopes. In this paper, we focus on the problem of monitoring a
+large number of pulsars in a dynamic environment. 
+
+\subsection*{Constraints, variables and assumptions}
+
+Two physically-motivated effects
+are introduced to bring variability to the scheduling problem:
+\begin{enumerate}
+    \item Pulsar scintillation impacts on the sensitivity of the observation and may lead to
+    either an extension of the integration time or premature abortion. Scintillation
+    is random and the decision to continue, extend or abort can be made only after
+    some fraction of the scheduled observation has been completed.
+    \item  Interference by satellites can render observations useless and, in extreme cases,
+    damage observatory equipment. Given up-to-date ephemerides, satellite positions
+    can be predicted and observations that would be corrupted by them can be avoided.
+\end{enumerate}
+
+Although we focus on pulsars, these two classes of dynamic environmental 
+influences (random and predictable) are quite generic and applicable to 
+other astronomical scheduling problems.
+
+In addition to the introduction of a dynamic environment, several aspects of our
+work differ from previous studies (such as that by Buchner):
+
+\begin{itemize}
+    \item  All approved observations have to be carried out, hence the priorities of
+    observations do not contribute to the objective function.
+    \item Continuous time is assumed rather than slots.
+    \item The initial formulation assumes a single telescope.
+    \item  The schedule is simulated in conditions modelled on actual 
+    observation conditions to obtain a likely outcome given the uncertainty 
+    of the problem.
+\end{itemize}
+
+Consequently, we have chosen to study the observation of a set of pulsars as an
+example of a highly dynamic telescope scheduling problem with uncertainty.
+
+\subsection*{Problem and objectives}
+
+\subsection*{Future Improvement}
+
+\subsection*{Summary}
+
+\section*{\cite{naghib2019framework} \citetitle*{naghib2019framework}}
 
 \subsection*{LSST}
 
@@ -83,95 +264,25 @@ To run a ground-based telescope with multiple science
 objectives, such as LSST, the scheduler has to offer
 \textit{controllability}, \textit{adjustability}, and \textit{recoverability}
 
+\subsection*{Summary}
 
 \textit{MORE TO ADD!!!!!!!!!!!!}
 
-\section*{\citetitle*{bellm2019zwicky}}
-
-\subsection*{Introduction and ZTF}
-
-In this work we consider the specific scheduling problem of
-a single-telescope ground-based wide-field imaging survey. We
-are focused on its application to the Zwicky Transient Facility
-project, which imposes some specific requirements, but our
-formalism is relevant for other time-domain surveys, such as
-those conducted with the LSST, the Dark Energy Camera, 
-and Hyper Suprime-cam. Minor modifications would enable its
-use by multi-telescope surveys such as the Asteroid Terrestrialimpact
-Last Alert System, PanSTARRS, the All-sky Automated Survey for
-Supernovae, and BlackGEM.
-
-Simply stated, the scheduling problem to be solved is to
-determine which fields to observe in what order, with a goal of
-maximizing an objective function while achieving the desired
-temporal spacing of observations (“cadence”). Optimizing the
-survey schedule provides a greater quantity of high-quality
-data, increasing the scientific output of the survey.
-
-Specific requirements imposed on the ZTF scheduler
-included the following:
-
-\begin{enumerate}
-    \item Select pointings from a fixed field grid
-    \item  Operate in both simulation mode and on-sky using the same scheduling code.
-    \item Conduct several surveys, maintaining strict independence of their observations and balancing observing time between programs.
-    \item Provide interfaces for conducting TOO observations and monitoring scheduler status.
-    \item Recover appropriately from interruptions and weather losses.
-    \item Maximize an observing efficiency metric and prioritize cadence control.
-\end{enumerate}
-
-\subsection*{Problem}
-
-The ZTF scheduler attempts to maximize the total
-number of exposures taken per night, weighted by the spatial
-volume probed by each, and subject to the constraints imposed by
-program balance and cadence. If the observing
-cadences are well chosen, maximizing this quantity will maximize
-the transient discovery rate. Bellm explores the relationship
-between the chosen observing cadences, a survey’s volumetric
-and areal survey rates, and the transient detection rate.
-
-Neglecting cosmological effects, the volume \(V_{lim}\) probed by
-a given exposure is proportional to the cube of the limiting
-distance \(d_{lim}\) a transient of fiducial absolute magnitude M can
-be detected given the limiting magnitude \(m_{lim}: V_{lim} \propto d_{lim}^3\),
-where \(d = 10^{0.2(m_{lim}-M+5)}\)pc. The volumetric
-weighting per exposure is thus \[V = 10^{0.6(m_{lim} - 21)},\]
-where we have absorbed constant factors and normalized to a
-convenient limiting magnitude for ZTF.
-
-\subsection*{Constraints}
-This weighting combines in a self-consistent way many
-factors that are intuitively relevant for assessing whether an
-image is “good”: the limiting magnitude depends on the filter,
-seeing, airmass, and sky brightness. We use a model
-to predict the variation in limiting magnitude and
-hence our metric as a function of these time-varying inputs.
-Accordingly, our optimization will naturally select exposures
-near zenith and away from the moon; but by combining them in
-a single scalar the optimization can coherently trade these
-factors against one another as they change through the night.
-
-Our metric deliberately does not contain factors that account
-for relative scientific priority or cadence. These concerns have
-no general quantitative relationship to our objective function or
-each other.14 Instead, we use the structure of the optimization
-algorithm (Section 4) to impose these constraints.
-
-Our optimization algorithm (Section 4) maximizes the
-summed metric over an entire night. In cases where a greedy
-algorithm is more convenient, it is simple to define an
-instantaneous volumetric survey speed, \[V \propto 10^{0.6m_{lim}}/(t_{exp}+t_{OH})\]
-that normalizes the volume probed in an exposure by the time
-required to obtain it, a sum of the exposure time \(t_{exp}\) and any
-readout or slew overheads \(t_{OH}\).
-
-
-\subsection*{Future Improvements}
-
-\section*{Extra notes and observations}
+\section*{Extra notes}
 \begin{enumerate}
     \item In a lot of papers, it was observed that the observation requests were weighted by a priority assigned to them by a committee or group.
+    \item In astronomy, observing programmes can be broadly classified as targeted observations of known sources and systematic scans of areas of the sky, such as surveys that
+    aim to map a large-scale structure or discover new objects.
+    \item A 2010 survey by Mora and Solar \cite{mora2010survey} presents algorithms used by the Hubble
+    Space Telescope, Very Large Telescope in the Chilean desert, the Subaru Telescope
+    on Hawaii, Gemini Observatory, Stratospheric Observatory for Infrared Astronomy
+    mounted on a Boeing 747, the Green Bank Telescope in West Virginia and the Atacama Large Millimetre/submillimetre Array (ALMA). They conclude that ‘None of
+    the existing professional astronomical scheduling solutions provides a full automatic
+    scheduler under changing conditions and for several telescopes, and none of the
+    existing algorithms has solved the dynamic priorities problem for this case.
+    \item A more recent survey by Colome et al. \cite{colome2012research} provides a concise listing of all algorithms employed for scheduling in different telescopes. An update was provided
+    by Solar et al. \cite{solar2016scheduling} in 2016 with a review of heuristic-based approaches such as
+    Simulated Annealing and Ant Colony Optimisation.
 \end{enumerate}
 
 \printbibliography
