@@ -2187,11 +2187,17 @@
     <bcf:citekey order="3">moser2018dispatch</bcf:citekey>
     <bcf:citekey order="4">moser2018dispatch</bcf:citekey>
     <bcf:citekey order="5">buchner2011dynamic</bcf:citekey>
-    <bcf:citekey order="6">naghib2019framework</bcf:citekey>
+    <bcf:citekey order="6">solar2016scheduling</bcf:citekey>
     <bcf:citekey order="7">naghib2019framework</bcf:citekey>
-    <bcf:citekey order="8">mora2010survey</bcf:citekey>
-    <bcf:citekey order="9">colome2012research</bcf:citekey>
-    <bcf:citekey order="10">solar2016scheduling</bcf:citekey>
+    <bcf:citekey order="8">naghib2019framework</bcf:citekey>
+    <bcf:citekey order="9">luo2018cost</bcf:citekey>
+    <bcf:citekey order="10">luo2018cost</bcf:citekey>
+    <bcf:citekey order="11">mora2010survey</bcf:citekey>
+    <bcf:citekey order="12">colome2012research</bcf:citekey>
+    <bcf:citekey order="13">solar2016scheduling</bcf:citekey>
+    <bcf:citekey order="14">lopez2016development</bcf:citekey>
+    <bcf:citekey order="15">colome2010tjo</bcf:citekey>
+    <bcf:citekey order="16">colome2014artificial</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

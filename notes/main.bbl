@@ -1,0 +1,563 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{bellm2019zwicky}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=3b15a3f908439601824991d59e364866}{%
+           family={Bellm},
+           familyi={B\bibinitperiod},
+           given={Eric\bibnamedelima C},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f361f3dca1ff584a77dba03497ecc963}{%
+           family={Kulkarni},
+           familyi={K\bibinitperiod},
+           given={Shrinivas\bibnamedelima R},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=31a041e0ed6b18697eb6992ffa0365ab}{%
+           family={Barlow},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=103237c4f16b267c828547078b599b02}{%
+           family={Feindt},
+           familyi={F\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+        {{hash=4086d899e8d90772e3df76e12cb473a6}{%
+           family={Graham},
+           familyi={G\bibinitperiod},
+           given={Matthew\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=74b7536423ac5bea79c08fce828a7621}{%
+           family={Goobar},
+           familyi={G\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9b3940372f3fa5fc607c505251a7eb4f}{%
+           family={Kupfer},
+           familyi={K\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1514804ba7f47cfc62464e807e39de59}{%
+           family={Ngeow},
+           familyi={N\bibinitperiod},
+           given={Chow-Choong},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=1d63ac0ee6755f929265c24820f0dd73}{%
+           family={Nugent},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6466274cf1883c10bdb0a181ae837167}{%
+           family={Ofek},
+           familyi={O\bibinitperiod},
+           given={Eran},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{5682c45a31460d5ae7f523f5bdeed559}
+      \strng{fullhash}{0ddcb740e9749f5ee392fca51314f836}
+      \strng{bibnamehash}{5682c45a31460d5ae7f523f5bdeed559}
+      \strng{authorbibnamehash}{5682c45a31460d5ae7f523f5bdeed559}
+      \strng{authornamehash}{5682c45a31460d5ae7f523f5bdeed559}
+      \strng{authorfullhash}{0ddcb740e9749f5ee392fca51314f836}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Publications of the Astronomical Society of the Pacific}
+      \field{number}{1000}
+      \field{title}{The zwicky transient facility: Surveys and scheduler}
+      \field{volume}{131}
+      \field{year}{2019}
+      \field{pages}{068003}
+      \range{pages}{1}
+    \endentry
+    \entry{buchner2011dynamic}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=4a66cc2c3e7389d3fe45a0517beadeb0}{%
+           family={Buchner},
+           familyi={B\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Auckland University of Technology}%
+      }
+      \strng{namehash}{4a66cc2c3e7389d3fe45a0517beadeb0}
+      \strng{fullhash}{4a66cc2c3e7389d3fe45a0517beadeb0}
+      \strng{bibnamehash}{4a66cc2c3e7389d3fe45a0517beadeb0}
+      \strng{authorbibnamehash}{4a66cc2c3e7389d3fe45a0517beadeb0}
+      \strng{authornamehash}{4a66cc2c3e7389d3fe45a0517beadeb0}
+      \strng{authorfullhash}{4a66cc2c3e7389d3fe45a0517beadeb0}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dynamic scheduling and planning parallel observations on large Radio Telescope Arrays with the Square Kilometre Array in mind}
+      \field{type}{phdthesis}
+      \field{year}{2011}
+    \endentry
+    \entry{colome2012research}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=f9c70fab079c47f829e8d885b22a5ee2}{%
+           family={Colome},
+           familyi={C\bibinitperiod},
+           given={Josep},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0ac1a8f131c43281bd475a60b47329f7}{%
+           family={Colomer},
+           familyi={C\bibinitperiod},
+           given={Pau},
+           giveni={P\bibinitperiod}}}%
+        {{hash=80bcddfdf82593edec6ae5a78490ab2b}{%
+           family={Gu{à}rdia},
+           familyi={G\bibinitperiod},
+           given={Josep},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6a0b9a6e82f7403f5e4c03c428b905f8}{%
+           family={Ribas},
+           familyi={R\bibinitperiod},
+           given={Ignasi},
+           giveni={I\bibinitperiod}}}%
+        {{hash=4f0cf3f23da311429866646924602f30}{%
+           family={Campreci{ó}s},
+           familyi={C\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9ffbfce337ecedc3d7cdf183fa2d846a}{%
+           family={Coiffard},
+           familyi={C\bibinitperiod},
+           given={Thierry},
+           giveni={T\bibinitperiod}}}%
+        {{hash=03fbb645b1982ea739535580f0f740bd}{%
+           family={Gesa},
+           familyi={G\bibinitperiod},
+           given={Lluis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3203b2462abeec652211f69eb84c9da7}{%
+           family={Mart{ı́}nez},
+           familyi={M\bibinitperiod},
+           given={Francesc},
+           giveni={F\bibinitperiod}}}%
+        {{hash=94f32689ffd7278f78e00bb0df54fe97}{%
+           family={Rodler},
+           familyi={R\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {International Society for Optics}%
+        {Photonics}%
+      }
+      \strng{namehash}{eb097a8f9ca687174989f3b8d97ee4c1}
+      \strng{fullhash}{72c707bdee9009df2d375b9ffb725f2f}
+      \strng{bibnamehash}{eb097a8f9ca687174989f3b8d97ee4c1}
+      \strng{authorbibnamehash}{eb097a8f9ca687174989f3b8d97ee4c1}
+      \strng{authornamehash}{eb097a8f9ca687174989f3b8d97ee4c1}
+      \strng{authorfullhash}{72c707bdee9009df2d375b9ffb725f2f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Observatory Operations: Strategies, Processes, and Systems IV}
+      \field{title}{Research on schedulers for astronomical observatories}
+      \field{volume}{8448}
+      \field{year}{2012}
+      \field{pages}{84481L}
+      \range{pages}{1}
+    \endentry
+    \entry{colome2014artificial}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=4fda18957695ab91bdd286f0cad68c69}{%
+           family={Colom{é}},
+           familyi={C\bibinitperiod},
+           given={Josep},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0ac1a8f131c43281bd475a60b47329f7}{%
+           family={Colomer},
+           familyi={C\bibinitperiod},
+           given={Pau},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4f0cf3f23da311429866646924602f30}{%
+           family={Campreci{ó}s},
+           familyi={C\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9ffbfce337ecedc3d7cdf183fa2d846a}{%
+           family={Coiffard},
+           familyi={C\bibinitperiod},
+           given={Thierry},
+           giveni={T\bibinitperiod}}}%
+        {{hash=904a17c00d111edc44a21c3b4f69696c}{%
+           family={O{ñ}a},
+           familyi={O\bibinitperiod},
+           given={Emma},
+           giveni={E\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=b20e84877904e977491393b0cee823cd}{%
+           family={Pedaletti},
+           familyi={P\bibinitperiod},
+           given={Giovanna},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5541fb596e600b2a89a276ec29565fd9}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={Diego\bibnamedelima F},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=7f9b37a425837b66277c4552c8497e2e}{%
+           family={Garcia-Piquer},
+           familyi={G\bibinithyphendelim P\bibinitperiod},
+           given={Alvaro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {International Society for Optics}%
+        {Photonics}%
+      }
+      \strng{namehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{fullhash}{9b6c2a56f876a81aab69a1fac50ac6d5}
+      \strng{bibnamehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{authorbibnamehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{authornamehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{authorfullhash}{9b6c2a56f876a81aab69a1fac50ac6d5}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Observatory Operations: Strategies, Processes, and Systems V}
+      \field{title}{Artificial intelligence for the CTA Observatory scheduler}
+      \field{volume}{9149}
+      \field{year}{2014}
+      \field{pages}{91490H}
+      \range{pages}{-1}
+    \endentry
+    \entry{colome2010tjo}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=4fda18957695ab91bdd286f0cad68c69}{%
+           family={Colom{é}},
+           familyi={C\bibinitperiod},
+           given={Josep},
+           giveni={J\bibinitperiod}}}%
+        {{hash=71d224a34fc4d1cc602d35c74d5279c3}{%
+           family={Casteels},
+           familyi={C\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6a0b9a6e82f7403f5e4c03c428b905f8}{%
+           family={Ribas},
+           familyi={R\bibinitperiod},
+           given={Ignasi},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7ec1451d04744b3720a74867535fc1b0}{%
+           family={Francisco},
+           familyi={F\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {International Society for Optics}%
+        {Photonics}%
+      }
+      \strng{namehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{fullhash}{d381b9ac59578e205f608a5292ae8793}
+      \strng{bibnamehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{authorbibnamehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{authornamehash}{f2c18a64a701aa64088192abc17fd856}
+      \strng{authorfullhash}{d381b9ac59578e205f608a5292ae8793}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Software and Cyberinfrastructure for Astronomy}
+      \field{title}{The TJO-OAdM robotic observatory: the scheduler}
+      \field{volume}{7740}
+      \field{year}{2010}
+      \field{pages}{77403K}
+      \range{pages}{-1}
+    \endentry
+    \entry{lopez2016development}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=aa4044a8a81b1bff95ffbd6e101c3d30}{%
+           family={L{ó}pez-Casado},
+           familyi={L\bibinithyphendelim C\bibinitperiod},
+           given={Carmen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4b82733ba60de489fdfe6955cc36015a}{%
+           family={P{é}rez-del-Pulgar},
+           familyi={P\bibinithyphendelim d\bibinithyphendelim P\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=19c639765fa5062d772b2b7695a805d7}{%
+           family={M{ũ}noz},
+           familyi={M\bibinitperiod},
+           given={V{í}ctor\bibnamedelima F},
+           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b5351243dbe6eb69be62a649bfc582ea}
+      \strng{fullhash}{b5351243dbe6eb69be62a649bfc582ea}
+      \strng{bibnamehash}{b5351243dbe6eb69be62a649bfc582ea}
+      \strng{authorbibnamehash}{b5351243dbe6eb69be62a649bfc582ea}
+      \strng{authornamehash}{b5351243dbe6eb69be62a649bfc582ea}
+      \strng{authorfullhash}{b5351243dbe6eb69be62a649bfc582ea}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Practical Applications of Agents and Multi-Agent Systems}
+      \field{title}{Development of a Scheduler for Heterogeneous Telescope Networks with Different Decision Algorithms}
+      \field{year}{2016}
+      \field{pages}{375\bibrangedash 378}
+      \range{pages}{4}
+    \endentry
+    \entry{luo2018cost}{article}{}
+      \name{author}{7}{}{%
+        {{hash=d94a3102fa335669bf02a798d345ccb7}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=d77220e8793898f4d45820c9c8984008}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Laiping},
+           giveni={L\bibinitperiod}}}%
+        {{hash=068a94495d691f71b216ed4dfe8758e4}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Ce},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c9768db14f07b0c90e7221e6ea5a72db}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cdbb74bc9c860cc08ea40d816403bf34}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jizhou},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4b7d3b4397052de8f3b58a02049b88c3}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod}}}%
+        {{hash=37ff78508b02b7a713208bb14c463c47}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7f79f2f621de3eeb4d989b8346e99fb3}
+      \strng{fullhash}{2a687343d299e249f5dd1612fbf9f84e}
+      \strng{bibnamehash}{7f79f2f621de3eeb4d989b8346e99fb3}
+      \strng{authorbibnamehash}{7f79f2f621de3eeb4d989b8346e99fb3}
+      \strng{authornamehash}{7f79f2f621de3eeb4d989b8346e99fb3}
+      \strng{authorfullhash}{2a687343d299e249f5dd1612fbf9f84e}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Experimental Astronomy}
+      \field{number}{1}
+      \field{title}{Cost-efficient scheduling of FAST observations}
+      \field{volume}{45}
+      \field{year}{2018}
+      \field{pages}{107\bibrangedash 126}
+      \range{pages}{20}
+    \endentry
+    \entry{mora2010survey}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=75d66706b3f605ad52552804ad62f4b2}{%
+           family={Mora},
+           familyi={M\bibinitperiod},
+           given={Matias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=069f6b0d8aba6be6c76941f86a0a66eb}{%
+           family={Solar},
+           familyi={S\bibinitperiod},
+           given={Mauricio},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c4553ee24b4e29cf738b7709d8a21dac}
+      \strng{fullhash}{c4553ee24b4e29cf738b7709d8a21dac}
+      \strng{bibnamehash}{c4553ee24b4e29cf738b7709d8a21dac}
+      \strng{authorbibnamehash}{c4553ee24b4e29cf738b7709d8a21dac}
+      \strng{authornamehash}{c4553ee24b4e29cf738b7709d8a21dac}
+      \strng{authorfullhash}{c4553ee24b4e29cf738b7709d8a21dac}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IFIP International Conference on Artificial Intelligence in Theory and Practice}
+      \field{title}{A survey on the dynamic scheduling problem in astronomical observations}
+      \field{year}{2010}
+      \field{pages}{111\bibrangedash 120}
+      \range{pages}{10}
+    \endentry
+    \entry{moser2018dispatch}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7a106d2859849925641e1da8a4dcb447}{%
+           family={Moser},
+           familyi={M\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=a36979cd3a4543532bc75f43823167c0}{%
+           family={Straten},
+           familyi={S\bibinitperiod},
+           given={Willem},
+           giveni={W\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ae4101781ff5158729f698b547280db9}
+      \strng{fullhash}{ae4101781ff5158729f698b547280db9}
+      \strng{bibnamehash}{ae4101781ff5158729f698b547280db9}
+      \strng{authorbibnamehash}{ae4101781ff5158729f698b547280db9}
+      \strng{authornamehash}{ae4101781ff5158729f698b547280db9}
+      \strng{authorfullhash}{ae4101781ff5158729f698b547280db9}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Experimental Astronomy}
+      \field{number}{2}
+      \field{title}{Dispatch approaches for scheduling radio telescope observations}
+      \field{volume}{46}
+      \field{year}{2018}
+      \field{pages}{285\bibrangedash 307}
+      \range{pages}{23}
+    \endentry
+    \entry{naghib2019framework}{article}{}
+      \name{author}{5}{}{%
+        {{hash=8aeb023018cccccf9796b35186c3c3c6}{%
+           family={Naghib},
+           familyi={N\bibinitperiod},
+           given={Elahesadat},
+           giveni={E\bibinitperiod}}}%
+        {{hash=328fa3365f9a5016af4c0d82af261899}{%
+           family={Yoachim},
+           familyi={Y\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=79768f587f70a504c04ba619eff1c28e}{%
+           family={Vanderbei},
+           familyi={V\bibinitperiod},
+           given={Robert\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=74c7e14796f8077fc66c5e4bd74b7162}{%
+           family={Connolly},
+           familyi={C\bibinitperiod},
+           given={Andrew\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=314fd6172cedc3ce91199ac87034a471}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={R\bibnamedelima Lynne},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{9c9ae1c5c6470100cc3ddd7202f710ee}
+      \strng{fullhash}{4e052a2efcb335fc6b662e9333349047}
+      \strng{bibnamehash}{9c9ae1c5c6470100cc3ddd7202f710ee}
+      \strng{authorbibnamehash}{9c9ae1c5c6470100cc3ddd7202f710ee}
+      \strng{authornamehash}{9c9ae1c5c6470100cc3ddd7202f710ee}
+      \strng{authorfullhash}{4e052a2efcb335fc6b662e9333349047}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astronomical Journal}
+      \field{number}{4}
+      \field{title}{A Framework for Telescope Schedulers: With Applications to the Large Synoptic Survey Telescope}
+      \field{volume}{157}
+      \field{year}{2019}
+      \field{pages}{151}
+      \range{pages}{1}
+    \endentry
+    \entry{solar2016scheduling}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fcde84a83a7f4bf956f74ca0769d90f6}{%
+           family={Solar},
+           familyi={S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=59f5508c7ece070ecc53c9576d5a5caa}{%
+           family={Michelon},
+           familyi={M\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3cf0f94981fc0d8cabb4011a265d2b57}{%
+           family={Avarias},
+           familyi={A\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=44c37af73eba403f68176494f0c25ec8}{%
+           family={Garces},
+           familyi={G\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a2495798f4f468e090d590678919421a}
+      \strng{fullhash}{ef42de75176daedef31ef56234f61c7a}
+      \strng{bibnamehash}{a2495798f4f468e090d590678919421a}
+      \strng{authorbibnamehash}{a2495798f4f468e090d590678919421a}
+      \strng{authornamehash}{a2495798f4f468e090d590678919421a}
+      \strng{authorfullhash}{ef42de75176daedef31ef56234f61c7a}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astronomy and Computing}
+      \field{title}{A scheduling model for astronomy}
+      \field{volume}{15}
+      \field{year}{2016}
+      \field{pages}{90\bibrangedash 104}
+      \range{pages}{15}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

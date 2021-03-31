@@ -127,15 +127,11 @@ where \(t_{filt}\) is the time required to change filters and w is a weight
 factor \((\approx(V_{rtf}))\) accounting for the value of each lost
 exposure.
 
-\subsection*{Future Improvements}
-
-\subsection*{Summary}
-
 \section*{\cite{moser2018dispatch} \citetitle*{moser2018dispatch}}
 
-\marginnote{This paper has a lot of really useful information from 
+\marginnote{This paper contains a lot of really useful information from 
 other papers. Some points from this paper are listed in the 
-\textit{Extra notes and observations} section below. 
+\textit{Extra notes} section below. 
 \textbf{Definately give this another read}}[1cm]
 
 \subsection*{Introduction and related work}
@@ -204,10 +200,35 @@ Consequently, we have chosen to study the observation of a set of pulsars as an
 example of a highly dynamic telescope scheduling problem with uncertainty.
 
 \subsection*{Problem and objectives}
+In astronomy, observing programmes can be broadly classified as targeted observations of known sources and systematic scans of areas of the sky, such as surveys that
+aim to map a large-scale structure or discover new objects.
 
-\subsection*{Future Improvement}
+Astronomers submit proposals for observations to telescope operators who
+approve proposals based on their merit and allocate telescope time. The proposals
+detail the level of priority of a target, its location and desired observation time. Generally, proposals are assessed biannually, to be processed over the subsequent 6 months.
+Solar et al. \cite{solar2016scheduling} describe the proposal process in detail.
 
-\subsection*{Summary}
+The observation period can be fully automated, interactive or manual. The goal of
+this work is to propose a scheduler capable of automating the process and eliminating
+the need for while leaving open the possibility of human intervention. To evaluate the 
+effectiveness of the scheduler, we assume a data set with targets and observation
+times and appraise the outcome by the overall duration.
+
+\hyperref[point:objectiveFunctions]{Take a look at point 5 of Extra notes}
+
+The optimisation goals of this study are
+\begin{itemize}
+    \item Minimisation of the inactivity periods.
+    \item Maximisation of time assigned to observations.
+    \item Maximisation of the quality of the data.
+\end{itemize}
+
+\marginnote{Could also add a \textit{future works} and \textit{summary} section.}[0cm]
+
+In this study, we investigate how the time spent on collecting a defined set of
+observations can be minimised. The quality of the data is treated as a constraint: If
+the scintillation of a target is found to be poor on arrival, the observation is postponed. In cases of mediocre quality, the observation time is extended to compensate
+by providing more data.
 
 \section*{\cite{naghib2019framework} \citetitle*{naghib2019framework}}
 
@@ -264,9 +285,10 @@ To run a ground-based telescope with multiple science
 objectives, such as LSST, the scheduler has to offer
 \textit{controllability}, \textit{adjustability}, and \textit{recoverability}
 
-\subsection*{Summary}
+\textbf{\textit{This one is incomplete. There is more to add.}}
 
-\textit{MORE TO ADD!!!!!!!!!!!!}
+\section*{\cite{luo2018cost} \citetitle*{luo2018cost}}
+\textbf{\textit{This one is incomplete. There is more to add.}}
 
 \section*{Extra notes}
 \begin{enumerate}
@@ -283,6 +305,16 @@ objectives, such as LSST, the scheduler has to offer
     \item A more recent survey by Colome et al. \cite{colome2012research} provides a concise listing of all algorithms employed for scheduling in different telescopes. An update was provided
     by Solar et al. \cite{solar2016scheduling} in 2016 with a review of heuristic-based approaches such as
     Simulated Annealing and Ant Colony Optimisation.
+    \item \label{point:objectiveFunctions} Most approaches in the literature describe telescope control software with scheduling
+    components without describing a clear objective function. Lopez-Casado \cite{lopez2016development}
+    formulated an optimisation goal consisting of a user score and the
+    percentage of observations executed (relative to the planned observations). Colome´
+    et al. \cite{colome2010tjo} formulated a merit function as a weighted sum of observation conditions
+    (height above the horizon, moon brightness and distance, best observation time,
+    distance from previous target and proposal priority), environment conditions (photometric quality) and proposal history (to counterbalance proposal priorities by time
+    already spent on the proposal). Colome et al.’s \cite{colome2014artificial} multiobjective approach considers
+    minimising slew time, maximising priority, minimising downtime and minimising
+    zenith angle which affects the image quality in optical telescopes.
 \end{enumerate}
 
 \printbibliography
